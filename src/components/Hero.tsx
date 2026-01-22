@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin, faTelegram } from "@fortawesome/free-brands-svg-icons";
 import { useLanguage } from "../contexts/LanguageContext";
-import type { Language } from "../translations";
 
 const SOCIAL_LINKS = [
   { icon: faTelegram, href: "https://t.me/d3cryptex", label: "Telegram" },

@@ -2,7 +2,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { useLanguage } from "../contexts/LanguageContext";
-import type { Project } from "../Types";
 
 // Keeping static data for images/links, but using translations for text
 const projectsData = [
@@ -43,7 +42,7 @@ const projectsData = [
 
 const Projects = () => {
     const { t } = useLanguage();
-    const projectItems = t('projects.items') as any[];
+    const projectItems = (t('projects.items') as unknown) as any[];
 
     return (
         <section id="projects" className="py-24 px-6 max-w-5xl mx-auto">

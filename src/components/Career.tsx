@@ -2,7 +2,7 @@ import { useLanguage } from "../contexts/LanguageContext";
 
 const Career = () => {
     const { t } = useLanguage();
-    const careerItems = t('career.items') as any[]; // Type assertion needed or better typing in context
+    const careerItems = (t('career.items') as unknown) as any[]; // Type assertion needed or better typing in context
 
     return (
         <section id="career" className="py-24 px-6 max-w-4xl mx-auto">
